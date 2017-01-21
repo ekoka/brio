@@ -1,0 +1,46 @@
+Request properties of interest:
+    - token
+    - auth
+    - content_type
+    - content_length
+    - bounded_stream : file like object.  (recommended instead of `stream`)
+    - protocol: http or https
+    - method
+    - uri (aka url): full url
+    - relative_uri: uri + qs
+    - path: only the path
+    - query_string: only the qs
+    - uri_template: routing url template. available after routing if the router used provides it.
+    - host
+    - subdomain
+    - env: the wsgi provided dict.
+    - context
+    - date: value of the Date header converted to datetime
+    - if_match 
+    - if_none_match
+    - if_modified_since: (datetime)
+    - if_unmodified_since: (datetime)
+    - params: dict – The mapping of request query parameter names to their values. Where the parameter appears multiple times in the query string, the value mapped to that parameter key will be a list of all the values in the order seen.
+    - options: dict – Set of global options passed from the API handler.
+    - cookies: dict – A dict of name/value cookie pairs. See also: Getting Cookies
+    - get_header(name, required=False): Retrieve the raw string value for the given header.
+    - get_header_as_datetime(header, required=False, obs_date=False)
+        - return an HTTP header with HTTP-Date values as a datetime. 
+    - get_param(name, required=False, store=None, default=None)
+        - return the raw value of a query string parameter as a string.
+    - get_param_as_bool(name, required=False, store=None, blank_as_true=False)
+        The following boolean strings are supported:
+        TRUE_STRINGS = ('true', 'True', 'yes', '1', 'on')
+        FALSE_STRINGS = ('false', 'False', 'no', '0', 'off')
+    - get_param_as_date(name, format_string=’%Y-%m-%d’, required=False, store=None)
+    - get_param_as_dict(name, required=False, store=None)
+        - Return the value of a query string parameter as a dict.
+        - Given a JSON value, parse and return it as a dict.
+    - get_param_as_int(name, required=False, min=None, max=None, store=None)
+        - Return the value of a query string parameter as an int.
+    - get_param_as_list(name, transform=None, required=False, store=None)
+        - Return the value of a query string parameter as a list.
+        - List items must be comma-separated or must be provided as multiple instances of the same param in the query string ala application/x-www-form-urlencoded.
+    - log_error(message)
+        - Write an error message to the server’s log.
+

@@ -1,0 +1,19 @@
+- create/delete activities
+- add/delete kids
+
+- schedule activities
+    - create a one-time schedule
+        - choose a date
+    - create a recurrent schedule
+        - start and end date
+        - weekly or monthly
+            - weekly: which days of the week
+            - monthly:
+                - which day of the month
+                - which weeks of the month + which days of the week
+
+        - add an exception to a recurrent schedule
+            - add a cancellation
+            - add a rescheduling
+
+- register kids to activities

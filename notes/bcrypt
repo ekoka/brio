@@ -1,0 +1,5 @@
+- a non-bcrypt key field should be associated to the user account and populated on successful bcrypt login.
+- on subsequent logins user can use that key instead of bcrypt to login
+- when using the non bcrypt key: 
+    - after an unsuccessful login attempt it is deleted
+- 
